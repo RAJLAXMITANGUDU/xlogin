@@ -6,7 +6,7 @@ const App=()=>{
   // const [error,setError]=useState("");
   const handleSubmit=(e)=>{
     e.preventDefault();
-    if(username || !password){
+    if(!username || !password){
       setMessage("Both fields are mandatory");
       return;
     }
@@ -20,7 +20,7 @@ const App=()=>{
 
     <div>
       <h1>Login Page</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} aria-label="login-form">
         <div>
           <label htmlFor="username">Username:</label>
           <input
@@ -43,7 +43,7 @@ const App=()=>{
         </div>
         <button type="submit">Submit</button>
       </form>
-      {message && <p>{message}</p>}
+      {message && <p role="alert">{message}</p>}
     </div>
   );
 };
