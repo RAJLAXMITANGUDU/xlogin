@@ -11,7 +11,7 @@ const App=()=>{
       return;
     }
     if(username==="user" && password==="password"){
-      setMessage("Welcome,user!");
+      setMessage("Welcome, user!");
     } else {
       setMessage("Invalid username or password");
     }
